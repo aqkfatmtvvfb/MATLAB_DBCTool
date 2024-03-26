@@ -1,6 +1,6 @@
 function Excel2DBC(Excel_file_path)
 % read sheet2
-[~,~,XlsContent]= xlsread(Excel_file_path,2);
+[~,~,XlsContent]= xlsread(Excel_file_path,1);
 [~,XlsColumn]  = size(XlsContent);
 for mColumn =1:XlsColumn
     switch (XlsContent{1,mColumn})
@@ -52,7 +52,7 @@ MinValue= XlsContent(2:end,MinColumn);
 MaxValue= XlsContent(2:end,MaxColumn);
 N_Signal=size (SignalName,1);
 
-[~,~,XlsContent]= xlsread(Excel_file_path,3);
+[~,~,XlsContent]= xlsread(Excel_file_path,2);
 [~,XlsColumn]  = size(XlsContent);
 for mColumn =1:XlsColumn
     switch (XlsContent{1,mColumn})

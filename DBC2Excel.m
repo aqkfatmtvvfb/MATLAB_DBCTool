@@ -127,7 +127,7 @@ end
 c1_ID=['ID';Signal_MsgID_hex(MsgIndex)];
 c1_SendNode=['SendNode';Signal_MsgTxNode(MsgIndex)];
 c1_MsgName=['MsgName';Signal_MsgName(MsgIndex)];
-xlswrite(XLSX_file_path,[c1_ID c1_SendNode c1_MsgName],1);
+% xlswrite(XLSX_file_path,[c1_ID c1_SendNode c1_MsgName],1);
 
 [~,sort_index] = sort(Signal_PrimaryKey);
 c2_ID=['ID';Signal_MsgID_hex(sort_index)];
@@ -148,7 +148,7 @@ c2_PrimaryKey = ['PrimaryKey';Signal_PrimaryKey(sort_index)];
 
 xlswrite(XLSX_file_path,[c2_ID c2_SendNode c2_MsgName c2_StartByte c2_StartBit...
     c2_SignalLength c2_SignalName c2_Unit...
-    c2_factor c2_offset c2_ByteOrder c2_Signed c2_Min c2_Max c2_PrimaryKey],2);
+    c2_factor c2_offset c2_ByteOrder c2_Signed c2_Min c2_Max c2_PrimaryKey],1);
 
 
 VAL_MsgID_hex = cell(N_VAL,1);
@@ -167,7 +167,7 @@ c3=['Value';VAL_SignalValue_hex(sort_index)];
 c4=['enum';VAL_SignalString(sort_index)];
 c5=['PrimaryKey';VAL_PrimaryKey(sort_index)];
 
-xlswrite(XLSX_file_path,[c2 c1 c3 c4 c5],3);
+xlswrite(XLSX_file_path,[c2 c1 c3 c4 c5],2);
 end
 
 
