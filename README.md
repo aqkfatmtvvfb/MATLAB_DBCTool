@@ -6,6 +6,7 @@ DBC与EXCEL互转工具，可用于多个DBC的手动合并（每个DBC生成Exc
 - 信号接收节点全部设置为Vector__XXX
 - 不支持扩展帧
 - 不支持复用
+- 不支持CAN-FD
 
 update 2024/4/4
 
